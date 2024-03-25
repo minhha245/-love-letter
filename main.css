@@ -24,7 +24,7 @@ html, body {
     top: 80%;
     opacity: 0;
     filter: drop-shadow(0 0 20px rgb(247, 176, 176));
-    animation: hiddenHeart 3.1s linear forwards,flyHeart 4s ease-in-out calc(var(--time) + 3.1s) infinite;
+    animation: hiddenHeart 3.1s linear forwards, flyHeart 4s ease-in-out calc(var(--time) + 3.1s) infinite;
 }
 
 .paperHeart1 {
@@ -78,14 +78,8 @@ html, body {
     left: -50px;
 }
 
-.container.active.close {
-    .btnBox {
-        animation: disappearBtn 1s ease-in-out forwards;
-    }
-
-    .boxTitle {
-        animation: disappearBoxTitle 1s ease-in-out forwards;
-    }
+.container.active.close .btnBox, .container.active.close .boxTitle {
+    animation: disappearBtn 1s ease-in-out forwards;
 }
 
 @keyframes disappearBtn {
@@ -117,7 +111,7 @@ html, body {
     background-color: #ffb3c1;
     border-radius: 50%;
     box-shadow: 120px -20px #ffb3c1, 240px -40px #ffb3c1, 360px -20px #ffb3c1,
-    480px 0px #ffb3c1, 600px -10px #ffb3c1, 720px 10px #ffb3c1, 840px 20px #ffb3c1, 
+    480px 0px #ffb3c1, 600px -10px #ffb3c1, 720px 10px #ffb3c1, 840px 20px #ffb3c1,
     960px 0px #ffb3c1, 1080px 40px #ffb3c1, 1200px 20px #ffb3c1, 1320px 0px #ffb3c1,
     1440px -20px #ffb3c1;
     transition: .8s;
@@ -131,7 +125,7 @@ html, body {
     }
 
     25% {
-        top:  10px;
+        top: 10px;
     }
 
     50% {
@@ -150,34 +144,34 @@ html, body {
 
 @keyframes animateCloud1 {
     0% {
-        top: 75;
+        top: 75px;
     }
 
     25% {
-        top:  85;
+        top: 85px;
     }
 
     50% {
-        top: 65;
+        top: 65px;
     }
 
     75% {
-        top: 85;
+        top: 85px;
     }
 
     100% {
-        top: 75;
+        top: 75px;
     }
 
 }
 
 @keyframes animateCloud2 {
     0% {
-        top: 150;
+        top: 150px;
     }
 
     25% {
-        top:  160px;
+        top: 160px;
     }
 
     50% {
@@ -189,7 +183,7 @@ html, body {
     }
 
     100% {
-        top: 150;
+        top: 150px;
     }
 
 }
@@ -204,7 +198,7 @@ html, body {
     background-color: #ffccd5;
     border-radius: 50%;
     box-shadow: 120px -20px #ffccd5, 240px -40px #ffccd5, 360px -20px #ffccd5,
-    480px 0px #ffccd5, 600px -10px #ffccd5, 720px 10px #ffccd5, 840px 20px #ffccd5, 
+    480px 0px #ffccd5, 600px -10px #ffccd5, 720px 10px #ffccd5, 840px 20px #ffccd5,
     960px 0px #ffccd5, 1080px 40px #ffccd5, 1200px 20px #ffccd5, 1320px 0px #ffccd5,
     1440px -20px #ffccd5, 1560px 0px #ffccd5;
     transition: .8s;
@@ -222,7 +216,7 @@ html, body {
     background-color: white;
     border-radius: 50%;
     box-shadow: 120px -20px white, 240px -20px white, 360px -20px white,
-    480px 0px white, 600px -10px white, 720px 10px white, 840px 20px white, 
+    480px 0px white, 600px -10px white, 720px 10px white, 840px 20px white,
     960px 0px white, 1080px 40px white, 1200px 20px white, 1320px 0px white,
     1440px -20px white, 1560px 0px white;
     transition: .8s;
@@ -248,7 +242,7 @@ html, body {
     flex-wrap: wrap;
     text-shadow: 0 0 20px white;
     animation: appearTitle 2s linear 3.1s forwards, floatingWords 4s ease-in-out infinite;
-    
+
 }
 
 .container .btnBox {
@@ -265,7 +259,7 @@ html, body {
     opacity: 1;
     transition: 1s;
     transition-delay: 5s;
-    animation: appearBtnBox 2s ease-in-out 5s forwards,animateOpenBtn 2s ease-in-out 5s infinite;
+    animation: appearBtnBox 2s ease-in-out 5s forwards, animateOpenBtn 2s ease-in-out 5s infinite;
 }
 
 @keyframes appearBtnBox {
@@ -326,17 +320,15 @@ html, body {
 }
 
 /* OPEN */
-.container.active.open {
-    .boxTitle {
-        animation: none;
-        top: -40%;
-    }
 
-    .btnBox {
-        animation: none;
-        top: 140%;
-    }
-    
+.container.active.open .boxTitle {
+    animation: none;
+    top: -40%;
+}
+
+.container.active.open .btnBox {
+    animation: none;
+    top: 140%;
 }
 
 .cardValentine {
@@ -348,7 +340,7 @@ html, body {
     height: 600px;
     width: 800px;
     background-color: transparent;
-    transition: .5;
+    transition: .5s;
 }
 
 .cardValentine.active {
@@ -360,7 +352,7 @@ html, body {
     height: 600px;
     width: 800px;
     background-color: transparent;
-    transition: .5;
+    transition: .5s;
     animation: animateCard 2s ease-in-out forwards;
 }
 
@@ -534,20 +526,20 @@ html, body {
     left: 50%;
     transform: translate(-50%, -50%);
     transition: .5s;
-
-    .left {
-        transform-style: preserve-3d;
-        transform: rotateY(-180deg);
-        transform-origin: left;
-        background-color: red;
-        transition: .5s;
-    }
-
-    .leftFront {
-        backface-visibility: hidden;
-    }
-
 }
+
+.cardValentine.active.open .left {
+    transform-style: preserve-3d;
+    transform: rotateY(-180deg);
+    transform-origin: left;
+    background-color: red;
+    transition: .5s;
+}
+
+.cardValentine.active.open .leftFront {
+    backface-visibility: hidden;
+}
+
 
 @keyframes appearTitle {
     to {
@@ -609,4 +601,31 @@ html, body {
     100% {
         top: 50%;
     }
+}
+
+@media (max-width: 960px) {
+
+}
+
+@media (max-width: 430px) {
+    .cardValentine {
+        width: 100% !important;
+        height: 45% !important;
+    }
+    .boxTitleCard {
+        width: 160px !important;
+        height: 150px !important;
+    }
+}
+
+@media (max-width: 390px) {
+
+}
+
+@media (max-width: 375px) {
+
+}
+
+@media (max-width: 360px) {
+
 }
