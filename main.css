@@ -616,16 +616,49 @@ html, body {
         width: 160px !important;
         height: 150px !important;
     }
+    .boxTitle {
+        font-size: 50px!important;
+    }
 }
 
 @media (max-width: 390px) {
-
+    .cardValentine {
+        width: 100% !important;
+        height: 45% !important;
+    }
+    .boxTitleCard {
+        width: 160px !important;
+        height: 150px !important;
+    }
+    .boxTitle {
+        font-size: 50px!important;
+    }
 }
 
 @media (max-width: 375px) {
-
+    .cardValentine {
+        width: 100% !important;
+        height: 45% !important;
+    }
+    .boxTitleCard {
+        width: 160px !important;
+        height: 150px !important;
+    }
+    .boxTitle {
+        font-size: 37px!important;
+    }
 }
 
 @media (max-width: 360px) {
-
+    .cardValentine {
+        width: 100% !important;
+        height: 45% !important;
+    }
+    .boxTitleCard {
+        width: 160px !important;
+        height: 150px !important;
+    }
+    .boxTitle {
+        font-size: 35px!important;
+    }
 }
