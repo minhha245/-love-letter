@@ -17,6 +17,9 @@
 </head>
 
 <body>
+<audio id="musicplayer" autoplay loop>
+    <source src="./mp3/music.mp3">
+</audio>
     <div class="container">
         <img class="paperHeart paperHeart1" style="--time: 0s" src="./img/paperHeart.webp" alt="">
         <img class="paperHeart paperHeart2" style="--time: 1s" src="./img/paperHeart.webp" alt="">
@@ -37,7 +40,7 @@
 
             <div class="btnBox">
                 <div class="cloudBtn"></div>
-                <button class="openBtn">Chạm vào đây đii bấy bii</button>
+                <button id="play" class="openBtn" onclick="toggleAudio()">Chạm vào đây đii bấy bii</button>
             </div>
         </div>
 
@@ -62,7 +65,16 @@
             </div>
         </div>
     </div>
-
+    <script>
+        function toggleAudio() {
+            var audio = document.getElementById('musicplayer');
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+    </script>
     <script src="./main.js"></script>
 </body>
 
