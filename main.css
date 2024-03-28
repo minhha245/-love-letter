@@ -470,7 +470,7 @@ html, body {
 .des {
     position: absolute;
     bottom: 40px;
-    left: 50%;
+    left: 0%;
     transform: translateX(-50%);
     font-family: "Protest Revolution", sans-serif;
     font-weight: 400;
@@ -603,8 +603,11 @@ html, body {
     }
 }
 
-@media (max-width: 960px) {
-
+@media (min-width: 960px) {
+    .boxTitle {
+        font-size: 60px;
+    }
+    
 }
 
 @media (max-width: 430px) {
@@ -661,4 +664,13 @@ html, body {
     .boxTitle {
         font-size: 35px!important;
     }
+}
+
+.des a::hover {
+color: #c9413f;
+cursor: pointer;
+}
+
+.des a {
+    cursor: pointer;
 }
